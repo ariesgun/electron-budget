@@ -12,9 +12,24 @@ module.exports = {
   },
 
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' }
+    rules: [
+      { test: /\.js$/, 
+        loader: 'babel-loader', 
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/react',
+            { 'plugins': ['@babel/plugin-proposal-class-properties'] }
+          ]
+        },
+        exclude: /node_modules/ },
+      { test: /\.scss$/, 
+        use: [
+          { loader: 'style-loader' }, 
+          { loader: 'css-loader' },
+          { loader: 'sass-loader'}
+        ]
+      }
     ]
   }
 };
