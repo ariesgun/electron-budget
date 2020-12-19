@@ -1,11 +1,16 @@
 'use strict';
-require('../static/sass/main.scss');
+import React from "react";
+import ReactDOM from "react-dom";
 
-var React = require('react');
-var ReactDom = require('react-dom');
+import '../static/sass/main.scss';
+import NavSideBar from "./components/NavSideBar";
 
 var App = () =>{
-		return <div><div className="tech electron">Electron</div> + <div className="tech react">React</div> + <div className="tech sass">Sass</div></div>;
+		return ( 
+			<div>
+				<NavSideBar />
+			</div>
+		);
 };
 
-ReactDom.render(<App/>, document.getElementById('react-root'));
+ReactDOM.render(<App/>, document.getElementById('react-root'));

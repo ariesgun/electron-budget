@@ -11,6 +11,8 @@ module.exports = {
     publicPath: 'http://localhost:8080/build/'
   },
 
+  externals: ['tailwindcss'],
+
   module: {
     rules: [
       { test: /\.js$/, 
@@ -27,6 +29,16 @@ module.exports = {
         use: [
           { loader: 'style-loader' }, 
           { loader: 'css-loader' },
+          {
+            loader: 'postcss-loader', // For autoprefixer
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+                plugins: [require('tailwindcss'), require('autoprefixer')],
+              },
+            },
+          },
           { loader: 'sass-loader'}
         ]
       }

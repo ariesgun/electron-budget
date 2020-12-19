@@ -1,43 +1,49 @@
-body {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
+@tailwind base;
 
-	margin: 0;
-	padding: 0;
+@tailwind components;
 
-	min-height: 100vh;
+// body {
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   justify-content: space-around;
 
-	background: linear-gradient(-8deg, #FF4E50, #F9D423);
+//   margin: 0;
+//   padding: 0;
 
-	text-shadow: 0 0.05em 0 rgba(0,0,0,0.1);
+//   min-height: 100vh;
 
-	font-size: 8vw;
-	font-family: sans-serif;
-}
+//   background: linear-gradient(-8deg, #ff4e50, #f9d423);
 
-#react-root {
-	text-align: center;
-}
+//   text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.1);
 
-.tech {
-	padding: 0.4em 0.6em 0.4em;
-	border-radius: 0.2em;
-	box-shadow: 0 0.05em 0 rgba(0,0,0,0.1);
-}
+//   font-size: 8vw;
+//   font-family: sans-serif;
+// }
 
-.electron {
-	color: #45828E;
-	background-color: #A5ECFA;
-}
+// #react-root {
+//   text-align: center;
+// }
 
-.react {
-	color: #61dafb;
-	background-color: #222;
-}
+// .tech {
+//   padding: 0.4em 0.6em 0.4em;
+//   border-radius: 0.2em;
+//   box-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.1);
+// }
 
-.sass {
-	color: #c6538c;
-	background-color: #ffffff;
-}
+// .electron {
+//   color: #45828e;
+//   background-color: #a5ecfa;
+// }
+
+// .react {
+//   color: #61dafb;
+//   background-color: #222;
+// }
+
+// .sass {
+//   color: #c6538c;
+//   background-color: #ffffff;
+// }
+
+@tailwind utilities;
