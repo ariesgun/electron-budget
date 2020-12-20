@@ -13,35 +13,29 @@ const NavSideBar = () => {
           items={[
             {
               title: 'Dashboard',
-              itemId: '/dashboard',
+              itemId: '/',
               // you can use your own custom Icon component as well
               // icon is optional
               // elemBefore: () => <Icon name="inbox" />,
             },
             {
-              title: 'Management',
-              itemId: '/management',
+              title: 'Records',
+              itemId: '/records',
               // elemBefore: () => <Icon name="users" />,
-              subNav: [
-                {
-                  title: 'Projects',
-                  itemId: '/management/projects',
-                },
-                {
-                  title: 'Members',
-                  itemId: '/management/members',
-                },
-              ],
+              // subNav: [
+              //   {
+              //     title: 'Projects',
+              //     itemId: '/management/projects',
+              //   },
+              //   {
+              //     title: 'Members',
+              //     itemId: '/management/members',
+              //   },
+              // ],
             },
             {
-              title: 'Another Item',
-              itemId: '/another',
-              subNav: [
-                {
-                  title: 'Teams',
-                  itemId: '/management/teams',
-                },
-              ],
+              title: 'Accounts',
+              itemId: '/accounts'
             },
           ]}
         />

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import {ChevronDownIcon, ChevronUpIcon} from './icon';
 
 // import '../../static/sass/main.scss';
@@ -69,31 +70,34 @@ const Navigation = ({
             return (
               <ul key={item.itemId} className="side-navigation-panel-select">
                 <li className="side-navigation-panel-select-wrap">
-                  <div
-                    onClick={() =>
-                      item.subNav
-                        ? handleSubNavExpand(item)
-                        : handleClick(item.itemId)
-                    }
-                    className={`side-navigation-panel-select-option hover:bg-gray-100 hover:text-gray-800 hover:border-pink-500 focus:outline-none flex items-center justify-between w-full px-6 py-3 text-gray-700 border-l-2 cursor-pointer ${
-                      activeSubNav.selectedId === item.itemId
-                        ? 'side-navigation-panel-select-option-selected text-gray-800 bg-gray-100 border-pink-500'
-                        : ''
-                    }`}
-                  >
-                    <span className="side-navigation-panel-select-option-wrap flex items-center">
-                      {/** Prefix Icon Component */}
-                      {ElemBefore && <ElemBefore />}
+                  <Link to={item.itemId}>
+                    <div
+                      onClick={() => 
+                        {}
+                        // item.subNav
+                        //   ? handleSubNavExpand(item)
+                        //   : handleClick(item.itemId)
+                      }
+                      className={`side-navigation-panel-select-option hover:bg-gray-100 hover:text-gray-800 hover:border-pink-500 focus:outline-none flex items-center justify-between w-full px-6 py-3 text-gray-700 border-l-2 cursor-pointer ${
+                        activeSubNav.selectedId === item.itemId
+                          ? 'side-navigation-panel-select-option-selected text-gray-800 bg-gray-100 border-pink-500'
+                          : ''
+                      }`}
+                    >
+                      <span className="side-navigation-panel-select-option-wrap flex items-center">
+                        {/** Prefix Icon Component */}
+                        {ElemBefore && <ElemBefore />}
 
-                      <span className="side-navigation-panel-select-option-text mx-4 font-medium">
-                        {item.title}
+                        <span className="side-navigation-panel-select-option-text mx-4 font-medium">
+                          {item.title}
+                        </span>
                       </span>
-                    </span>
 
-                    {item.subNav &&
-                      item.subNav.length > 0 &&
-                      (isActiveTab ? <ChevronUpIcon /> : <ChevronDownIcon />)}
-                  </div>
+                      {item.subNav &&
+                        item.subNav.length > 0 &&
+                        (isActiveTab ? <ChevronUpIcon /> : <ChevronDownIcon />)}
+                    </div>
+                  </Link>
                 </li>
 
                 {item.subNav && isActiveTab && (
