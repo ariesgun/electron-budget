@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import {ChevronDownIcon, ChevronUpIcon} from './icon';
 
-// import '../../static/sass/main.scss';
-
 const Navigation = ({
   activeItemId,
   onSelect,

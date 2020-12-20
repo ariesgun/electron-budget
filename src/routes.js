@@ -9,13 +9,16 @@ import RecordsPage from './pages/RecordsPage';
 const Routes = () => {
   return (
     <HashRouter>
-      <NavSideBar />
-      <div className="fixed left-72">
-        
-          <Route path="/records" component={RecordsPage} />
-          <Route path="/accounts" component={AccountsPage} />
-          <Route path="/" exact component={HomePage} />
-        
+      <div className="w-full max-w-8xl">
+        <div className="flex">
+          <NavSideBar />
+          <div className="min-w-0 w-full min-h-screen">
+              <Route path="/records" component={RecordsPage} />
+              <Route path="/accounts" component={AccountsPage} />
+              <Route path="/" exact component={HomePage} />
+            
+          </div>
+        </div>
       </div>
     </HashRouter>
   );

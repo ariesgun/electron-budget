@@ -3,7 +3,9 @@ import Accounts from '../components/Accounts';
 
 const AccountsPage = () => {
   return (
-    <Accounts />
+    <div className="bg-gray-100">
+      <Accounts />
+    </div>
   );
 };
 

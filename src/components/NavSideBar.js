@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 const NavSideBar = () => {
   return (
     <>
-      <div className="fixed inset-y-0 left-0 w-72 overflow-y-auto border-r-4 border-gray-300 bg-white-border-r-2 bg-white ">
+      <div className="static flex-none inset-0 w-72 overflow-y-auto border-r-4 border-gray-300 bg-white-border-r-2 bg-white ">
         <Navigation 
           activeItemId="/management/members"
           onSelect={({itemId}) => {
