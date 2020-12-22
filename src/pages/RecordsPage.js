@@ -3,7 +3,9 @@ import Records from '../components/Records';
 
 const RecordsPage = () => {
   return (
-    <Records />
+    <div className="p-4">
+      <Records />
+    </div>
   );
 };
 
