@@ -2,8 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import '../static/sass/main.scss';
-import NavSideBar from "./components/NavSideBar";
+require( '../static/sass/main.scss');
 import Routes from "./routes";
 
 var App = () =>{

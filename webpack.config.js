@@ -5,6 +5,10 @@ module.exports = {
   context: path.join(__dirname, '/src'),
   entry: './entry.js',
 
+  devServer: {
+    publicPath: '/build/'
+  },
+
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/build'),

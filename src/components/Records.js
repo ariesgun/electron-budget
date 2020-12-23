@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 const Records = () => {
   return (
-    <table className="w-9/12 text-left border-collapse">
+    <table className="w-full text-left border-collapse">
       <thead>
         <tr>
           <th className="top-9 text-lg font-semibold text-gray-600 p-0">
