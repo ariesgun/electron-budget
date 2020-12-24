@@ -34,6 +34,10 @@ const NavSideBar = () => {
               // ],
             },
             {
+              title: 'Categories',
+              itemId: '/categories'
+            },
+            {
               title: 'Accounts',
               itemId: '/accounts'
             },
