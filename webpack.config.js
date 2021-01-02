@@ -12,10 +12,17 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/build'),
-    publicPath: 'http://localhost:8080/build/'
+    publicPath: 'http://localhost:8080/build/',
   },
 
-  externals: ['tailwindcss'],
+  externals: {
+    tailwindcss: 'tailwindcss', 
+    sqlite3: 'commonjs sqlite3',
+    knex: 'commonjs knex'
+  },
+
+  target: "node",
+  
 
   module: {
     rules: [
