@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
+import Category from './Category';
 
 const Categories = () => {
   return (
-    <table className="w-full text-left border-collapse">
+    <table className="text-left border-collapse w-10/12">
       <thead>
         <tr>
-          <th className="top-9 text-lg font-semibold text-gray-600 p-0">
+          <th className="top-9 text-lg font-semibold text-gray-600 p-0 w-1/12">
             <div className="pb-2 pr-2 border-b border-gray-200">
               #
             </div>
           </th>
-          <th className="top-9 text-lg font-semibold text-gray-600 p-0">
+          <th className="top-9 text-lg font-semibold text-gray-600 p-0 w-3/12">
             <div className="pb-2 pr-2 border-b border-gray-200">
               Category
             </div>
@@ -23,21 +24,9 @@ const Categories = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="py-2 pr-2 ">1</td>
-          <td className="py-2 pr-2 ">Consumption</td>
-          <td className="py-2 pr-2 ">Consumption, Restaurant</td>
-        </tr>
-        <tr>
-          <td className="py-2 pr-2 border-t">2</td>
-          <td className="py-2 pr-2 border-t">Housing Rent</td>
-          <td className="py-2 pr-2 border-t">Housing Rent</td>
-        </tr>
-        <tr>
-          <td className="py-2 pr-2 border-t">3</td>
-          <td className="py-2 pr-2 border-t">Transportation</td>
-          <td className="py-2 pr-2 border-t">Weekend Vrij, Travel</td>
-        </tr>
+        <Category id="1" category="Consumption" description="Consumption, Restaurant" />
+        <Category id="2" category="Housing Rent" description="Housing Rent" />
+        <Category id="3" category="Transportation" description="Public transport, Weekend Vrij, Travel" />
       </tbody>
     </table>
   )
