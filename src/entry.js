@@ -9,10 +9,14 @@ import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 import '../node_modules/@fortawesome/fontawesome-free/js/all.js';
 
 import Routes from "./routes";
+import store from './app/store';
+import { Provider } from "react-redux";
 
 var App = () =>{
 		return ( 
-			<Application database={database} />
+			<Provider store={store}>
+				<Application database={database} />
+			</Provider>
 		);
 };
 

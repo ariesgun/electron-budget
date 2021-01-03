@@ -1,7 +1,19 @@
 import React, {useState} from 'react';
 import Category from './Category';
 
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  addCategory,
+
+} from '../reducers/categoriesReducer';
+
 const Categories = () => {
+  const categories = useSelector(state => state.categories.items);
+
+  const renderedCategories = categories.map((category, idx) => {
+    return <Category key={idx} id={idx} category={category.category} description={category.description} />
+  })
+
   return (
     <table className="text-left border-collapse w-10/12">
       <thead>
@@ -24,9 +36,7 @@ const Categories = () => {
         </tr>
       </thead>
       <tbody>
-        <Category id="1" category="Consumption" description="Consumption, Restaurant" />
-        <Category id="2" category="Housing Rent" description="Housing Rent" />
-        <Category id="3" category="Transportation" description="Public transport, Weekend Vrij, Travel" />
+        {renderedCategories}
       </tbody>
     </table>
   )
