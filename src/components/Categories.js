@@ -12,12 +12,12 @@ const Categories = () => {
           </th>
           <th className="top-9 text-lg font-semibold text-gray-600 p-0">
             <div className="pb-2 pr-2 border-b border-gray-200">
-              Transaction
+              Category
             </div>
           </th>
           <th className="top-9 text-lg font-semibold text-gray-600 p-0">
             <div className="pb-2 pr-2 border-b border-gray-200">
-              Date
+              Description
             </div>
           </th>
         </tr>
@@ -25,18 +25,18 @@ const Categories = () => {
       <tbody>
         <tr>
           <td className="py-2 pr-2 ">1</td>
-          <td className="py-2 pr-2 ">Belanja AH</td>
-          <td className="py-2 pr-2 ">15/02/2020</td>
+          <td className="py-2 pr-2 ">Consumption</td>
+          <td className="py-2 pr-2 ">Consumption, Restaurant</td>
         </tr>
         <tr>
           <td className="py-2 pr-2 border-t">2</td>
-          <td className="py-2 pr-2 border-t">Belanja AH</td>
-          <td className="py-2 pr-2 border-t">11/03/2020</td>
+          <td className="py-2 pr-2 border-t">Housing Rent</td>
+          <td className="py-2 pr-2 border-t">Housing Rent</td>
         </tr>
         <tr>
           <td className="py-2 pr-2 border-t">3</td>
-          <td className="py-2 pr-2 border-t">Dinner</td>
-          <td className="py-2 pr-2 border-t">20/04/2020</td>
+          <td className="py-2 pr-2 border-t">Transportation</td>
+          <td className="py-2 pr-2 border-t">Weekend Vrij, Travel</td>
         </tr>
       </tbody>
     </table>

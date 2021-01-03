@@ -38,7 +38,9 @@
     "osx-package": "./node_modules/.bin/webpack -p && ./node_modules/electron-packager/cli.js ./ ElectronReactSass --out ./bin --platform=darwin --arch=x64 --version=0.34.0 --overwrite --ignore=\"ignore|bin|node_modules\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "assert": "^2.0.0",
+    "file-loader": "^6.2.0",
     "knex": "^0.21.15",
     "path": "^0.12.7",
     "react-router": "^5.2.0",

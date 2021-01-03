@@ -12,10 +12,10 @@ const RecordsPage = () => {
       <BalanceSummary />
       <NewRecord />
       <div className="flex">
-        <div className="flex-grow mr-12">
+        <div className="w-9/12 mr-6">
           <Records />
         </div>
-        <div className="flex-grow-0 mx-4">
+        <div className="w-3/12 mx-4">
           <SumByCategory />
         </div>
       </div>

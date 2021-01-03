@@ -28,7 +28,7 @@ class NewRecord extends Component {
     return (
       <form className="NewRecord" onSubmit={this.handleSubmit}>
         <div className="flex w-full">
-          <div className="w-3/12 px-3 mb-6">
+          <div className="w-3/12 pr-3 mb-6">
             <label className="font-bold text-grey-darker block uppercase" htmlFor="grid-date">
               Date
             </label>
@@ -41,8 +41,8 @@ class NewRecord extends Component {
             <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter px-4 py-2" id="grid-transaction" type="text" />
           </div>
         </div>
-        <div className="flex w-full">
-          <div className="w-2/12 px-3 mb-6">
+        <div className="flex w-full mb-6">
+          <div className="w-2/12 pr-3 mb-6">
             <label className="font-bold text-grey-darker block uppercase" htmlFor="grid-category">
               Category
             </label>

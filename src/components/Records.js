@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Record from './Record';
 
 const Records = () => {
   return (
@@ -38,30 +39,10 @@ const Records = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="py-2 pr-2 ">1</td>
-          <td className="py-2 pr-2 ">Belanja AH</td>
-          <td className="py-2 pr-2 ">15/02/2020</td>
-          <td className="py-2 pr-2 ">Consumption</td>
-          <td className="py-2 pr-2 ">Rabobank</td>
-          <td className="py-2 pr-2 ">10</td>
-        </tr>
-        <tr>
-          <td className="py-2 pr-2 border-t">2</td>
-          <td className="py-2 pr-2 border-t">Belanja AH</td>
-          <td className="py-2 pr-2 border-t">11/03/2020</td>
-          <td className="py-2 pr-2 border-t">Consumption</td>
-          <td className="py-2 pr-2 border-t">Rabobank</td>
-          <td className="py-2 pr-2 border-t">15</td>
-        </tr>
-        <tr>
-          <td className="py-2 pr-2 border-t">3</td>
-          <td className="py-2 pr-2 border-t">Dinner</td>
-          <td className="py-2 pr-2 border-t">20/04/2020</td>
-          <td className="py-2 pr-2 border-t">Consumption</td>
-          <td className="py-2 pr-2 border-t">Rabobank</td>
-          <td className="py-2 pr-2 border-t">20</td>
-        </tr>
+        <Record id="1" description="Belanja AH" date="15/02/2020" category="Consumption" account="Rabobank" amount="10" />
+        <Record id="2" description="Belanja AH" date="16/02/2020" category="Consumption" account="Rabobank" amount="20" />
+        <Record id="3" description="Housing Rent" date="20/02/2020" category="Housing Rent" account="Rabobank" amount="375" />
+        <Record id="4" description="Belanja AH" date="22/02/2020" category="Consumption" account="Rabobank" amount="15" />
       </tbody>
     </table>
   )
