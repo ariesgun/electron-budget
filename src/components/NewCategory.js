@@ -9,6 +9,8 @@ const NewCategory = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
+    e.preventDefault();
+
     dispatch(addCategory(
       {category, description}
     ))

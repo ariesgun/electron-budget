@@ -1,6 +1,19 @@
 import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
 
 const SumByCategory = () => {
+
+  const sumByCategories = useSelector(state => state.sumByCategory.items);
+
+  const renderedSumCategories = sumByCategories.map((sumCategory, idx) => {
+    return (
+      <tr key={idx}>
+        <td className="py-2 pl-2 pr-8">{sumCategory.category}</td>
+        <td className="py-2 pr-2">{sumCategory.amount}</td>
+      </tr>
+    )
+  });
+
   return (
     <table className="w-full text-left border-collapse">
       <thead>
@@ -18,18 +31,7 @@ const SumByCategory = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="py-2 pl-2 pr-8 ">Consumption</td>
-          <td className="py-2 pr-2 ">100</td>
-        </tr>
-        <tr>
-          <td className="py-2 pl-2 pr-8 border-t">Housing Rent</td>
-          <td className="py-2 pr-2 border-t">150</td>
-        </tr>
-        <tr>
-          <td className="pt-2 pl-2 pb-4 pr-8 border-t">Miscellaneous</td>
-          <td className="pt-2 pb-4 pr-2 border-t">200</td>
-        </tr>
+        {renderedSumCategories}
       </tbody>
     </table>
   )

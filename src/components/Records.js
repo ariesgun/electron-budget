@@ -1,7 +1,21 @@
 import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
 import Record from './Record';
 
 const Records = () => {
+
+  const records = useSelector(state => state.records.items);
+
+  const renderedRecords = records.map((record, idx) => {
+    return <Record key={idx}
+                   id={idx} 
+                   record={record.record}
+                   category={record.category} 
+                   account={record.account}
+                   amount={record.amount}
+                   date={record.date} />
+  })
+
   return (
     <table className="w-full text-left border-collapse">
       <thead>
@@ -39,10 +53,7 @@ const Records = () => {
         </tr>
       </thead>
       <tbody>
-        <Record id="1" description="Belanja AH" date="15/02/2020" category="Consumption" account="Rabobank" amount="10" />
-        <Record id="2" description="Belanja AH" date="16/02/2020" category="Consumption" account="Rabobank" amount="20" />
-        <Record id="3" description="Housing Rent" date="20/02/2020" category="Housing Rent" account="Rabobank" amount="375" />
-        <Record id="4" description="Belanja AH" date="22/02/2020" category="Consumption" account="Rabobank" amount="15" />
+        {renderedRecords}
       </tbody>
     </table>
   )

@@ -1,12 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore, createStore } from '@reduxjs/toolkit';
 import categoriesReducer from '../reducers/categoriesReducer';
 import accountsReducer from '../reducers/accountsReducer';
 import recordsReducer from '../reducers/recordsReducer';
+import sumByCategoryReducer from '../reducers/SumByCategoryReducer';
 
-export default configureStore({
-  reducer: {
-    accounts: accountsReducer,
-    categories: categoriesReducer,
-    records: recordsReducer
-  }
-});
+const rootReducer = combineReducers({
+  accounts: accountsReducer,
+  categories: categoriesReducer,
+  sumByCategory: sumByCategoryReducer,
+  records: recordsReducer,
+})
+
+export default createStore(rootReducer);

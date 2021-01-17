@@ -9,7 +9,7 @@ const Category = (props) => {
 
   const [inHover, setHover] = useState(false);
   const [inEdit, setEdit] = useState(false);
-  const [inDelete, setDelete] = useState(false);
+  const [inDelete, setDelete] = useState(false);                               
 
   const dispatch = useDispatch();
 
